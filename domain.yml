@@ -1,0 +1,99 @@
+version: '2.0'
+intents:
+- get_recommendations
+- goodbye
+- greet
+
+- search_property
+slots:
+  location:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: location
+  bedrooms:
+    type: float
+    mappings:
+    - type: from_entity
+      entity: bedrooms
+  bathrooms:
+    type: float
+    mappings:
+    - type: from_entity
+      entity: bathrooms
+  price:
+    type: float
+    mappings:
+    - type: from_entity
+      entity: price
+  viewing_date:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: viewing_date
+  min_bedrooms:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: min_bedrooms
+  max_price:
+    type: float
+    mappings:
+    - type: from_entity
+      entity: max_price
+  amenities:
+     type: list
+      influence_conversation: false
+      auto_fill: false
+    mappings:
+    - type: from_entity
+      entity: amenities
+  area:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: area
+  property_type:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: property_type
+
+entities:
+- property
+- location
+- bedrooms
+- bathrooms
+- price
+- viewing_date
+- min_bedrooms
+- max_price
+- property_type
+- area
+- amenities
+actions:
+- utter_greet
+
+- action_search_property
+- action_get_recommendations
+responses:
+  utter_greet:
+  - text: Hello! How can I assist you today?
+  utter_goodbye:
+  - text: Goodbye! If you have any more questions in the future, feel free to ask.
+  utter_search_properties:
+  - text: "Here are some properties that match your criteria:\n{property_listings}"
+  utter_recommendations:
+  - text: |-
+      Here are some property recommendations based on your preferences:
+      {recommendations}
+ 
+  utter_no_properties_found:
+  - text: I couldn't find any properties matching your criteria.
+  utter_default:
+  - text: I'm not sure I understand. Could you please rephrase that?
+fallback_responses:
+- utter_default
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

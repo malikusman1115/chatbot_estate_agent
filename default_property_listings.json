@@ -1,0 +1,122 @@
+[
+    {
+        "location": "DUbai",
+        "bedrooms": 2,
+        "bathrooms": 1,
+        "price": 500000
+    },
+    {
+        "location": "Abu dhabi",
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "price": 600000
+    },
+    {
+        "location": "Ras Al Khaimah",
+        "bedrooms": 4,
+        "bathrooms": 3,
+        "price": 700000
+    },
+    {
+        "location": "Ajmeera",
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "price": 450000
+    },
+    {
+        "location": " Sharjah",
+        "bedrooms": 4,
+        "bathrooms": 2,
+        "price": 800000
+    },
+    {
+        "location": "Umm Al Qaiwain",
+        "bedrooms": 5,
+        "bathrooms": 3,
+        "price": 900000
+    },
+    {
+        "location": " Fujairah",
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "price": 750000
+    },
+    {
+        "location": "Ajman",
+        "bedrooms": 2,
+        "bathrooms": 1,
+        "price": 550000
+    },
+    {
+        "location": "Al Ain",
+        "bedrooms": 4,
+        "bathrooms": 2,
+        "price": 780000
+    },
+    {
+        "location": "Jebel Ali",
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "price": 480000
+    },
+    {
+        "location": "Al Khawaneej",
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "price": 670000
+    },
+    {
+        "location": "Dhaid",
+        "bedrooms": 4,
+        "bathrooms": 3,
+        "price": 820000
+    },
+    {
+        "location": "Fujairah",
+        "bedrooms": 2,
+        "bathrooms": 1,
+        "price": 560000
+    },
+    {
+        "location":  "Sharjah",
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "price": 690000
+    },
+    {
+        "location": "DUbai",
+        "bedrooms": 5,
+        "bathrooms": 3,
+        "price": 920000
+    },
+    {
+        "location": "Abu dhabi",
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "price": 720000
+    },
+    {
+        "location": " Fujairah",
+        "bedrooms": 2,
+        "bathrooms": 1,
+        "price": 570000
+    },
+    {
+        "location": "Ajman",
+        "bedrooms": 4,
+        "bathrooms": 2,
+        "price": 790000
+    },
+    {
+        "location": "Jebel Ali",
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "price": 460000
+    },
+    {
+        "location": "Al Khawaneej",
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "price": 680000
+    }
+]

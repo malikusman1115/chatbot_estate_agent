@@ -1,0 +1,626 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: search_property
+  examples: |
+    - Find me properties in [ Jumeirah Beach Residence](location) with [5](bedrooms) and [4](bathrooms) bathrooms
+    - Show me houses in [Downtown Dubai(location) under [800000](price)
+    - What are the listings in [ Palm Jumeirah](location)?
+    - Find me properties in [Al Safa](location) with [1](bedrooms) and [1](bathrooms) bathrooms
+    - Show me houses in [The Springs](location) under [6000000](price)
+    - What are the listings in [Dubai Sports City](location)?
+    - Show me houses with [2](bedrooms) bedrooms and [1](bathrooms) bathrooms in [ Dubai Residence Complex](location)
+    - Find properties in [International City](location) with at least [5](bedrooms) bedrooms
+    - Display houses with at most [5000000](price) price in [Deira](location)
+    - List available properties with [10](bedrooms) bedrooms and [7](bathrooms) bathrooms in [Dubai Design District](location)
+    - Find me properties in [Jumeirah Beach Residence](location) with [5](bedrooms) and [4](bathrooms) bathrooms
+    - Show me houses in [Downtown Dubai](location) under [800000](price)
+    - What are the listings in [Palm Jumeirah](location)?
+    - Find me properties in [Al Safa](location) with [1](bedrooms) and [1](bathrooms) bathrooms
+    - Show me houses in [The Springs](location) under [6000000](price)
+    - What are the listings in [Dubai Sports City](location)?
+    - Show me houses with [2](bedrooms) bedrooms and [1](bathrooms) bathrooms in [Dubai Residence Complex](location)
+    - Find properties in [International City](location) with at least [5](bedrooms) bedrooms
+    - Display houses with at most [5000000](price) price in [Deira](location)
+    - List available properties with [10](bedrooms) bedrooms and [7](bathrooms) bathrooms in [Dubai Design District](location)
+    - Find me properties in [Jumeirah Village Circle](location) with [3](bedrooms) and [2](bathrooms) bathrooms
+    - Show me houses in [Dubai Marina](location) under [1000000](price)
+    - What are the listings in [The Greens](location)?
+    - Show me houses with [4](bedrooms) bedrooms and [3](bathrooms) bathrooms in [Arabian Ranches](location)
+    - Find properties in [Jumeirah Lakes Towers](location) with at least [2](bedrooms) bedrooms
+    - Display houses with at most [300000](price) price in [Discovery Gardens](location)
+    - List available properties with [6](bedrooms) bedrooms and [5](bathrooms) bathrooms in [Motor City](location)
+    - Find me properties in [Dubai Investment Park](location) with [3](bedrooms) and [2](bathrooms) bathrooms
+    - Show me houses in [Al Barsha](location) under [2000000](price)
+    - What are the listings in [Dubailand](location)?
+    - Show me houses with [1](bedrooms) bedroom and [1](bathrooms) bathroom in [Dubai Silicon Oasis](location)
+    - Find properties in [Mirdif](location) with at least [4](bedrooms) bedrooms
+    - Display houses with at most [4000000](price) price in [Jebel Ali](location)
+    - List available properties with [8](bedrooms) bedrooms and [6](bathrooms) bathrooms in [Umm Suqeim](location)
+    - Find me properties in [Dubai Hills Estate](location) with [5](bedrooms) and [4](bathrooms) bathrooms
+    - Show me houses in [Meadows](location) under [5000000](price)
+    - What are the listings in [Al Furjan](location)?
+    - Show me houses with [2](bedrooms) bedrooms and [2](bathrooms) bathrooms in [Dubai Investment Park 2](location)
+    - Find properties in [Al Barari](location) with at least [3](bedrooms) bedrooms
+    - Display houses with at most [7000000](price) price in [Al Warqaa](location)
+    - List available properties with [9](bedrooms) bedrooms and [7](bathrooms) bathrooms in [Jumeirah Golf Estates](location)
+    - Find me properties in [Dubai Creek Harbour](location) with [4](bedrooms) and [3](bathrooms) bathrooms
+    - Show me houses in [Al Mamzar](location) under [3000000](price)
+    - What are the listings in [Dubai Residence Complex](location)?
+    - Show me houses with [3](bedrooms) bedrooms and [2](bathrooms) bathrooms in [Al Barsha South](location)
+    - Find properties in [The Villa](location) with at least [6](bedrooms) bedrooms
+    - Display houses with at most [10000000](price) price in [Dubai Investment Park 1](location)
+    - List available properties with [7](bedrooms) bedrooms and [4](bathrooms) bathrooms in [The Views](location)
+    - Find me properties in [Jumeirah Park](location) with [5](bedrooms) and [4](bathrooms) bathrooms
+    - Show me houses in [Remraam](location) under [2500000](price)
+    - What are the listings in [Dubai International City](location)?
+    - Show me houses with [4](bedrooms) bedrooms and [3](bathrooms) bathrooms in [Dubai Maritime City](location)
+    - Find properties in [Dubai Silicon Oasis](location) with at least [2](bedrooms) bedrooms
+    - Display houses with at most [600000](price) price in [Jumeirah Islands](location)
+    - List available properties with [5](bedrooms) bedrooms and [3](bathrooms) bathrooms in [Al Sufouh](location)
+    - Find me properties in [City Walk](location) with [3](bedrooms) and [2](bathrooms) bathrooms
+    - Show me houses in [Jumeirah Village Triangle](location) under [3500000](price)
+    - What are the listings in [Dubai Studio City](location)?
+    - Show me houses with [2](bedrooms) bedrooms and [1](bathrooms) bathroom in [Al Barsha 1](location)
+    - Find properties in [Dubai Healthcare City](location) with at least [4](bedrooms) bedrooms
+    - Display houses with at most [9000000](price) price in [Dubai World Central](location)
+    - List available properties with [6](bedrooms) bedrooms and [4](bathrooms) bathrooms in [Culture Village](location)
+    - Find me properties in [Jumeirah Beach Residence](location) with [3](bedrooms) and [2](bathrooms) bathrooms
+    - Show me houses in [Palm Jumeirah](location) under [1200000](price)
+    - What are the listings in [Downtown Dubai](location)?
+    - Find me properties in [Arabian Ranches](location) with [4](bedrooms) and [3](bathrooms) bathrooms
+    - Show me houses in [Dubai Marina](location) under [2000000](price)
+    - What are the listings in [Emirates Hills](location)?
+    - Show me houses with [2](bedrooms) bedrooms and [2](bathrooms) bathrooms in [The Springs](location)
+    - Find properties in [Al Barsha](location) with at least [5](bedrooms) bedrooms
+    - Display houses with at most [5000000](price) price in [Jumeirah Village Circle](location)
+    - List available properties with [3](bedrooms) bedrooms and [2](bathrooms) bathrooms in [Mirdif](location)
+    - Find me properties in [Dubai Hills Estate](location) with [4](bedrooms) and [3](bathrooms) bathrooms
+    - Show me houses in [The Villa](location) under [3000000](price)
+    - What are the listings in [Meadows](location)?
+    - Show me houses with [5](bedrooms) bedrooms and [4](bathrooms) bathrooms in [Dubailand](location)
+    - Find properties in [Al Furjan](location) with at least [3](bedrooms) bedrooms
+    - Display houses with at most [4000000](price) price in [Jumeirah Golf Estates](location)
+    - List available properties with [6](bedrooms) bedrooms and [5](bathrooms) bathrooms in [Dubai Silicon Oasis](location)
+    - Find me properties in [Dubai Sports City](location) with [2](bedrooms) and [1](bathrooms) bathrooms
+    - Show me houses in [Al Barari](location) under [6000000](price)
+    - What are the listings in [Umm Suqeim](location)?
+    - Show me houses with [4](bedrooms) bedrooms and [3](bathrooms) bathrooms in [The Greens](location)
+    - Find properties in [Jumeirah Village Triangle](location) with at least [3](bedrooms) bedrooms
+    - Display houses with at most [700000](price) price in [Dubai Investment Park](location)
+    - List available properties with [5](bedrooms) bedrooms and [4](bathrooms) bathrooms in [Arabian Ranches 2](location)
+    - Find me properties in [Jumeirah Park](location) with [4](bedrooms) and [3](bathrooms) bathrooms
+    - Show me houses in [Al Barsha South](location) under [2500000](price)
+    - What are the listings in [Jumeirah Islands](location)?
+    - Show me houses with [3](bedrooms) bedrooms and [2](bathrooms) bathrooms in [The Meadows](location)
+    - Find properties in [Dubai Investment Park 2](location) with at least [4](bedrooms) bedrooms
+    - Display houses with at most [3000000](price) price in [Dubai Studio City](location)
+    - List available properties with [5](bedrooms) bedrooms and [3](bathrooms) bathrooms in [Al Barsha 1](location)
+    - Find me properties in [Mirdif](location) with [3](bedrooms) and [2](bathrooms) bathrooms
+    - Show me houses in [Jumeirah Golf Estates](location) under [4000000](price)
+    - What are the listings in [The Springs 5](location)?
+    - Show me houses with [4](bedrooms) bedrooms and [3](bathrooms) bathrooms in [Al Barsha 2](location)
+    - Find properties in [Dubai Marina](location) with at least [2](bedrooms) bedrooms
+    - Display houses with at most [1500000](price) price in [Meadows 9](location)
+    - List available properties with [3](bedrooms) bedrooms and [2](bathrooms) bathrooms in [Jumeirah Village Circle](location)
+    - Find me properties in [Palm Jumeirah](location) with [3](bedrooms) and [2](bathrooms) bathrooms
+    - Show me houses in [Al Barsha 3](location) under [1800000](price)
+    - What are the listings in [Jumeirah Beach Residence](location)?
+    - Show me houses with [5](bedrooms) bedrooms and [4](bathrooms) bathrooms in [Dubai Silicon Oasis](location)
+    - Find properties in [Jumeirah Village Triangle](location) with at least [4](bedrooms) bedrooms
+    - Display houses with at most [2500000](price) price in [Jumeirah Park](location)
+    - List available properties with [4](bedrooms) bedrooms and [3](bathrooms) bathrooms in [Mirdif](location)
+    - Find me properties in [The Villa](location) with [4](bedrooms) and [3](bathrooms) bathrooms
+    - Show me houses in [The Springs](location) under [5000000](price)
+    - What are the listings in [Dubai Marina](location)?
+    - Show me houses with [3](bedrooms) bedrooms and [2](bathrooms) bathrooms in [Al Barsha](location)
+    - Find properties in [Arabian Ranches](location) with at least [3](bedrooms) bedrooms
+    - Display houses with at most [3500000](price) price in [Jumeirah Lakes Towers](location)
+    - List available properties with [5](bedrooms) bedrooms and [4](bathrooms) bathrooms in [The Greens](location)
+    - Find me properties in [Downtown Dubai](location) with [2](bedrooms) and [1](bathrooms) bathrooms
+    - Show me houses in [Dubai Hills Estate](location) under [7000000](price)
+    - What are the listings in [Emirates Living](location)?
+    - Show me houses with [4](bedrooms) bedrooms and [3](bathrooms) bathrooms in [Dubai Sports City](location)
+    - Find properties in [Palm Jumeirah](location) with at least [5](bedrooms) bedrooms
+    - Display houses with at most [9000000](price) price in [The Springs 7](location)
+    - List available properties with [3](bedrooms) bedrooms and [2](bathrooms) bathrooms in [Dubai Investment Park](location)
+    - Find me properties in [Al Furjan](location) with [3](bedrooms) and [2](bathrooms) bathrooms
+    - Show me houses in [Dubai Marina](location) under [4000000](price)
+    - What are the listings in [Jumeirah Islands](location)?
+    - Show me houses with [2](bedrooms) bedrooms and [2](bathrooms) bathrooms in [Jumeirah Golf Estates](location)
+    - Find properties in [The Meadows](location) with at least [4](bedrooms) bedrooms
+    - Display houses with at most [3500000](price) price in [Jumeirah Village Circle](location)
+    - List available properties with [3](bedrooms) bedrooms and [2](bathrooms) bathrooms in [Arabian Ranches 2](location)
+    - Find me properties in [Dubai Hills Estate](location) with [4](bedrooms) and [3](bathrooms) bathrooms
+    - Show me houses in [Meadows 9](location) under [6000000](price)
+    - What are the listings in [Al Barsha](location)?
+    - Show me houses with [5](bedrooms) bedrooms and [4](bathrooms) bathrooms in [Dubai Silicon Oasis](location)
+    - Find properties in [The Springs](location) with at least [3](bedrooms) bedrooms
+    - Display houses with at most [4500000](price) price in [Jumeirah Park](location)
+    - List available properties with [4](bedrooms) bedrooms and [3](bathrooms) bathrooms in [Mirdif](location)
+    - Find me properties in [Palm Jumeirah](location) with [3](bedrooms) and [2](bathrooms) bathrooms
+    - Show me houses in [Al Barsha 3](location) under [1800000](price)
+    - What are the listings in [Jumeirah Beach Residence](location)?
+    - Show me houses with [5](bedrooms) bedrooms and [4](bathrooms) bathrooms in [Dubai Silicon Oasis](location)
+    - Find properties in [Jumeirah Village Triangle](location) with at least [4](bedrooms) bedrooms
+    - Display houses with at most [2500000](price) price in [Jumeirah Park](location)
+    - List available properties with [4](bedrooms) bedrooms and [3](bathrooms) bathrooms in [Mirdif](location)
+    - Find me properties in [The Villa](location) with [4](bedrooms) and [3](bathrooms) bathrooms
+    - Show me houses in [The Springs](location) under [5000000](price)
+    - What are the listings in [Dubai Marina](location)?
+    - Show me houses with [3](bedrooms) bedrooms and [2](bathrooms) bathrooms in [Al Barsha](location)
+    - Find properties in [Arabian Ranches](location) with at least [3](bedrooms) bedrooms
+    - Display houses with at most [3500000](price) price in [Jumeirah Lakes Towers](location)
+    - List available properties with [5](bedrooms) bedrooms and [4](bathrooms) bathrooms in [The Greens](location)
+    - Find me properties in [Downtown Dubai](location) with [2](bedrooms) and [1](bathrooms) bathrooms
+    - Show me houses in [Dubai Hills Estate](location) under [7000000](price)
+    - What are the listings in [Emirates Living](location)?
+    - Show me houses with [4](bedrooms) bedrooms and [3](bathrooms) bathrooms in [Dubai Sports City](location)
+    - Find properties in [Palm Jumeirah](location) with at least [5](bedrooms) bedrooms
+    - Display houses with at most [9000000](price) price in [The Springs 7](location)
+    - List available properties with [3](bedrooms) bedrooms and [2](bathrooms) bathrooms in [Dubai Investment Park](location)
+    - Find [3](bedrooms) bedroom properties in [Arabian Ranches](location) with an area of at least [2000sqft](area) sqft
+    - Show me houses under [5000000](price) in [Jumeirah Lakes Towers](location) with [Central A/C](amenities) and [Shared Gym](amenities)
+    - List [apartments](property_type) in [The Greens](location) with [5](bedrooms) bedrooms and [4](bathrooms) bathrooms
+    - I'm looking for [villas](property_type) in [Downtown Dubai](location) with a [Private Garden](amenities) and [Maid Service](amenities)
+    - Show me [villas](property_type) in [Dubai Hills Estate](location) under [7000000](price) with [Pets Allowed](amenities) and [Private Pool](amenities)
+    - What are the listings in [Emirates Living](location) with [Barbecue Area](amenities) and [Children's Pool](amenities)?
+    - Show me houses in [Dubai Sports City](location) with [4](bedrooms) bedrooms, [3](bathrooms) bathrooms, and a [Walk-in Closet](amenities)
+    - Find properties in [Palm Jumeirah](location) with at least [5](bedrooms) bedrooms and an area over [3000 sqft](area) sqft
+    - Display houses with at most [9000000](price) in [The Springs 7](location) featuring [Central Heating](amenities) and [Jacuzzi](amenities)
+    - List available properties with [3](bedrooms) bedrooms and [2](bathrooms) bathrooms in [Dubai Investment Park](location) with a minimum of [1500](area) sqft
+    - Find [3](bedrooms) bedroom houses in [Arabian Ranches](location) with an area of at least [2000](area sqft) sqft
+    - Show me [apartments](property_type) in [The Greens](location) with [5](bedrooms) bedrooms and [4](bathrooms) bathrooms
+    - List [villas](property_type) in [Downtown Dubai](location) with [Private Garden](amenities) and [Maid Service](amenities)
+    - Show [Apartment](property_type) under [7000000](price) in [Dubai Hills Estate](location) with [Pets Allowed](amenities) and [Private Pool](amenities)
+    - What are the available [listings](property_type) in [Emirates Living](location) with [Barbecue Area](amenities) and [Children's Pool](amenities)?
+    - Display [houses](property_type) in [Dubai Sports City](location) with [4](bedrooms) bedrooms, [3](bathrooms) bathrooms, and a [Walk-in Closet](amenities)
+    - Find [Apartment](property_type) in [Palm Jumeirah](location) with at least [5](bedrooms) bedrooms and an area over [3000 sqft](area) sqft
+    - Show [houses](property_type) with at most [9000000](price) in [The Springs 7](location) featuring [Central Heating](amenities) and [Jacuzzi](amenities)
+    - List available [Apartment](property_type) with [3](bedrooms) bedrooms and [2](bathrooms) bathrooms in [Dubai Investment Park](location) with a minimum of [1500sqft](area) sqft
+    - Find [houses](property_type) under [5000000](price) in [Jumeirah Lakes Towers](location) with [Central A/C](amenities) and [Shared Gym](amenities)
+    - Display [villas](property_type) in [Dubai Hills Estate](location) with [Pets Allowed](amenities) and [Private Pool](amenities)
+    - List [apartments](property_type) in [The Greens](location) with [4](bedrooms) bedrooms and [3](bathrooms) bathrooms
+    - Find [Apartment](property_type) in [Downtown Dubai](location) with [Private Garden](amenities) and [Maid Service](amenities)
+    - Show [houses](property_type) under [7000000](price) in [Emirates Living](location) with [Barbecue Area](amenities) and [Children's Pool](amenities)
+    - Display [villas](property_type) in [Dubai Sports City](location) with [Walk-in Closet](amenities)
+    - List [houses](property_type) in [Palm Jumeirah](location) with at least [5](bedrooms) bedrooms and an area over [3000sqm](area) sqft
+    - Find [Apartment](property_type) with at most [9000000](price) in [The Springs 7](location) featuring [Central Heating](amenities) and [Jacuzzi](amenities)
+    - Show available [apartments](property_type) with [3](bedrooms) bedrooms and [2](bathrooms) bathrooms in [Dubai Investment Park](location) with a minimum of [1500sqm](area) 
+    - Display [villas](property_type) under [5000000](price) in [Jumeirah Lakes Towers](location) with [Central A/C](amenities) and [Shared Gym](amenities)
+    - List [apartments](property_type) in [The Greens](location) with [5](bedrooms) bedrooms and [4](bathrooms) bathrooms
+    - Find [villas](property_type) in [Downtown Dubai](location) with [Private Garden](amenities) and [Maid Service](amenities)
+    - Show [villas](property_type) under [7000000](price) in [Dubai Hills Estate](location) with [Pets Allowed](amenities) and [Private Pool](amenities)
+    - What are the listings in [Emirates Living](location) with [Barbecue Area](amenities) and [Children's Pool](amenities)?
+    - Display [houses](property_type) in [Dubai Sports City](location) with [4](bedrooms) bedrooms, [3](bathrooms) bathrooms, and a [Walk-in Closet](amenities)
+    - List [Apartment](property_type) in [Palm Jumeirah](location) with at least [5](bedrooms) bedrooms and an area over [3000 sqm](area) 
+    - Show [houses](property_type) with at most [9000000](price) in [The Springs 7](location) featuring [Central Heating](amenities) and [Jacuzzi](amenities)
+    - List available [Penthouses](property_type) with [3](bedrooms) bedrooms and [2](bathrooms) bathrooms in [Dubai Investment Park](location) with a minimum of [1500 sqft](area) 
+    - Find [houses](property_type) under [5000000](price) in [Jumeirah Lakes Towers](location) with [Central A/C](amenities) and [Shared Gym](amenities)
+    - Display [villas](property_type) in [Dubai Hills Estate](location) with [Pets Allowed](amenities) and [Private Pool](amenities)
+    - List [apartments](property_type) in [The Greens](location) with [5](bedrooms) bedrooms and [4](bathrooms) bathrooms
+    - Find [villas](property_type) in [Downtown Dubai](location) with [Private Garden](amenities) and [Maid Service](amenities)
+    - Show [villas](property_type) under [7000000](price) in [Emirates Living](location) with [Barbecue Area](amenities) and [Children's Pool](amenities)
+    - What are the available [listings](property_type) in [Dubai Sports City](location) with [4](bedrooms) bedrooms, [3](bathrooms) bathrooms, and a [Walk-in Closet](amenities)?
+    - Display [Penthouses](property_type) in [Palm Jumeirah](location) with at least [5](bedrooms) bedrooms and an area over [3000sqm](area) 
+    - Show [houses](property_type) with at most [9000000](price) in [The Springs 7](location) featuring [Central Heating](amenities) and [Jacuzzi](amenities)
+    - List available [Penthouses](property_type) with [3](bedrooms) bedrooms and [2](bathrooms) bathrooms in [Dubai Investment Park](location) with a minimum of [1500 sqm](area)
+    - Find [houses](property_type) under [5000000](price) in [Jumeirah Lakes Towers](location) with [Central A/C](amenities) and [Shared Gym](amenities)
+    - Display [villas](property_type) in [Dubai Hills Estate](location) with [Pets Allowed](amenities) and [Private Pool](amenities)
+    - List [apartments](property_type) in [The Greens](location) with [5](bedrooms) bedrooms and [4](bathrooms) bathrooms
+    - Find [villas](property_type) in [Downtown Dubai](location) with [Private Garden](amenities) and [Maid Service](amenities)
+    - Show [villas](property_type) under [7000000](price) in [Emirates Living](location) with [Barbecue Area](amenities) and [Children's Pool](amenities)
+    - What are the available [listings](property_type) in [Dubai Sports City](location) with [4](bedrooms) bedrooms, [3](bathrooms) bathrooms, and a [Walk-in Closet](amenities)?
+    - Display [Penthouses](property_type) in [Palm Jumeirah](location) with at least [5](bedrooms) bedrooms and an area over [3000 sqft](area) 
+    - Show [houses](property_type) with at most [9000000](price) in [The Springs 7](location) featuring [Central Heating](amenities) and [Jacuzzi](amenities)
+    - List available [Penthouses](property_type) with [3](bedrooms) bedrooms and [2](bathrooms) bathrooms in [Dubai Investment Park](location) with a minimum of [1500 sqft](area)
+    - Find [3](bedrooms) bedroom houses in [Arabian Ranches](location) with an area of at least [2000 sqm](area) 
+    - Show me [apartments](property_type) in [The Greens](location) with [5](bedrooms) bedrooms and [4](bathrooms) bathrooms
+    - List [villas](property_type) in [Downtown Dubai](location) with [Private Garden](amenities) and [Maid Service](amenities)
+    - Show [Penthouses](property_type) under [7000000](price) in [Dubai Hills Estate](location) with [Pets Allowed](amenities) and [Private Pool](amenities)
+    - What are the available [listings](property_type) in [Emirates Living](location) with [Barbecue Area](amenities) and [Children's Pool](amenities)?
+    - Display [houses](property_type) in [Dubai Sports City](location) with [4](bedrooms) bedrooms, [3](bathrooms) bathrooms, and a [Walk-in Closet](amenities)
+    - Find [Penthouses](property_type) in [Palm Jumeirah](location) with at least [5](bedrooms) bedrooms and an area over [3000sqm](area) sqm
+    - Show [houses](property_type) with at most [9000000](price) in [The Springs 7](location) featuring [Central Heating](amenities) and [Jacuzzi](amenities)
+    - List available [Townhouses](property_type) with [3](bedrooms) bedrooms and [2](bathrooms) bathrooms in [Dubai Investment Park](location) with a minimum of [1500 sqm](area) 
+    - Find [houses](property_type) under [5000000](price) in [Jumeirah Lakes Towers](location) with [Central A/C](amenities) and [Shared Gym](amenities)
+    - Display [villas](property_type) in [Dubai Hills Estate](location) with [Pets Allowed](amenities) and [Private Pool](amenities)
+    - List [apartments](property_type) in [The Greens](location) with [5](bedrooms) bedrooms and [4](bathrooms) bathrooms
+    - Find [villas](property_type) in [Downtown Dubai](location) with [Private Garden](amenities) and [Maid Service](amenities)
+    - Show [villas](property_type) under [7000000](price) in [Emirates Living](location) with [Barbecue Area](amenities) and [Children's Pool](amenities)
+    - What are the available [listings](property_type) in [Dubai Sports City](location) with [4](bedrooms) bedrooms, [3](bathrooms) bathrooms, and a [Walk-in Closet](amenities)?
+    - Display [Townhouses](property_type) in [Palm Jumeirah](location) with at least [5](bedrooms) bedrooms and an area over [3000sqft](area) 
+    - Show [houses](property_type) with at most [9000000](price) in [The Springs 7](location) featuring [Central Heating](amenities) and [Jacuzzi](amenities)
+    - List available [Townhouses](property_type) with [3](bedrooms) bedrooms and [2](bathrooms) bathrooms in [Dubai Investment Park](location) with a minimum of [1500 sqft](area) 
+    - Find [houses](property_type) under [5000000](price) in [Jumeirah Lakes Towers](location) with [Central A/C](amenities) and [Shared Gym](amenities)
+    - Display [villas](property_type) in [Dubai Hills Estate](location) with [Pets Allowed](amenities) and [Private Pool](amenities)
+    - List [apartments](property_type) in [The Greens](location) with [5](bedrooms) bedrooms and [4](bathrooms) bathrooms
+    - Find [villas](property_type) in [Downtown Dubai](location) with [Private Garden](amenities) and [Maid Service](amenities)
+    - Show [villas](property_type) under [7000000](price) in [Emirates Living](location) with [Barbecue Area](amenities) and [Children's Pool](amenities)
+    - What are the available [listings](property_type) in [Dubai Sports City](location) with [4](bedrooms) bedrooms, [3](bathrooms) bathrooms, and a [Walk-in Closet](amenities)?
+    - Display [Townhouses](property_type) in [Palm Jumeirah](location) with at least [5](bedrooms) bedrooms and an area over [3000 sqm](area)
+    - Show [houses](property_type) with at most [9000000](price) in [The Springs 7](location) featuring [Central Heating](amenities) and [Jacuzzi](amenities)
+    - List available [Townhouses](property_type) with [3](bedrooms) bedrooms and [2](bathrooms) bathrooms in [Dubai Investment Park](location) with a minimum of [1500 sqm](area) 
+    - Find [houses](property_type) under [5000000](price) in [Jumeirah Lakes Towers](location) with [Central A/C](amenities) and [Shared Gym](amenities)
+    - Display [villas](property_type) in [Dubai Hills Estate](location) with [Pets Allowed](amenities) and [Private Pool](amenities)
+    - List [apartments](property_type) in [The Greens](location) with [5](bedrooms) bedrooms and [4](bathrooms) bathrooms
+    - Find [Apartment](property_type) in [Downtown Dubai](location) with [Private Garden](amenities) and [Maid Service](amenities)
+    - Show [villas](property_type) under [7000000](price) in [Emirates Living](location) with [Barbecue Area](amenities) and [Children's Pool](amenities)
+    - What are the available [listings](property_type) in [Dubai Sports City](location) with [4](bedrooms) bedrooms, [3](bathrooms) bathrooms, and a [Walk-in Closet](amenities)?
+    - Display [Townhouses](property_type) in [Palm Jumeirah](location) with at least [5](bedrooms) bedrooms and an area over [3000 sqm](area) 
+    - Show [houses](property_type) with at most [9000000](price) in [The Springs 7](location) featuring [Central Heating](amenities) and [Jacuzzi](amenities)
+    - List available [Townhouses](property_type) with [3](bedrooms) bedrooms and [2](bathrooms) bathrooms in [Dubai Investment Park](location) with a minimum of [1500 sqm](area) 
+    - Find [houses](property_type) under [5000000](price) in [Jumeirah Lakes Towers](location) with [Central A/C](amenities) and [Shared Gym](amenities)
+    - Display [villas](property_type) in [Dubai Hills Estate](location) with [Pets Allowed](amenities) and [Private Pool](amenities)
+    - List [apartments](property_type) in [The Greens](location) with [5](bedrooms) bedrooms and [4](bathrooms) bathrooms
+    - Find [villas](property_type) in [Downtown Dubai](location) with [Private Garden](amenities) and [Maid Service](amenities)
+    - Show [villas](property_type) under [7000000](price) in [Emirates Living](location) with [Barbecue Area](amenities) and [Children's Pool](amenities)
+    - What are the available [listings](property_type) in [Dubai Sports City](location) with [4](bedrooms) bedrooms, [3](bathrooms) bathrooms, and a [Walk-in Closet](amenities)?
+    - Display [Studio apartment](property_type) in [Palm Jumeirah](location) with at least [5](bedrooms) bedrooms and an area over [3000sqm/1500sqft](area)
+    - Show [houses](property_type) with at most [9000000](price) in [The Springs 7](location) featuring [Central Heating](amenities) and [Jacuzzi](amenities)
+    - List available [Studio apartment](property_type) with [3](bedrooms) bedrooms and [2](bathrooms) bathrooms in [Dubai Investment Park](location) with a minimum of [1500 sqft/3000 sqm](area)
+    - Find [houses](property_type) under [5000000](price) in [Jumeirah Lakes Towers](location) with [Central A/C](amenities) and [Shared Gym](amenities)
+    - Display [villas](property_type) in [Dubai Hills Estate](location) with [Pets Allowed](amenities) and [Private Pool](amenities)
+    - List [apartments](property_type) in [The Greens](location) with [5](bedrooms) bedrooms and [4](bathrooms) bathrooms
+    - Find [Apartments](property_type) in [Downtown Dubai](location) with [Private Garden](amenities) and [Maid Service](amenities)
+    - Show [villas](property_type) under [7000000](price) in [Emirates Living](location) with [Barbecue Area](amenities) and [Children's Pool](amenities)
+    - What are the available [listings](property_type) in [Dubai Sports City](location) with [4](bedrooms) bedrooms, [3](bathrooms) bathrooms, and a [Walk-in Closet](amenities)?
+    - Display [Studio apartment](property_type) in [Palm Jumeirah](location) with at least [5](bedrooms) bedrooms and an area over [3000 sqft](area) 
+    - Show [houses](property_type) with at most [9000000](price) in [The Springs 7](location) featuring [Central Heating](amenities) and [Jacuzzi](amenities)
+    - List available [Studio apartment](property_type) with [3](bedrooms) bedrooms and [2](bathrooms) bathrooms in [Dubai Investment Park](location) with a minimum of [1500 sqm](area)
+    - Find [houses](property_type) under [5000000](price) in [Jumeirah Lakes Towers](location) with [Central A/C](amenities) and [Shared Gym](amenities)
+    - Display [villas](property_type) in [Dubai Hills Estate](location) with [Pets Allowed](amenities) and [Private Pool](amenities)
+    - List [apartments](property_type) in [The Greens](location) with [5](bedrooms) bedrooms and [4](bathrooms) bathrooms
+    - Find [Apartments](property_type) in [Downtown Dubai](location) with [Private Garden](amenities) and [Maid Service](amenities)
+    - Show [Residential](property_type) under [7000000](price) in [Emirates Living](location) with [Barbecue Area](amenities) and [Children's Pool](amenities)
+    - What are the available [listings](property_type) in [Dubai Sports City](location) with [4](bedrooms) bedrooms, [3](bathrooms) bathrooms, and a [Walk-in Closet](amenities)?
+    - Display [Apartment](property_type) in [Palm Jumeirah](location) with at least [5](bedrooms) bedrooms and an area over [3000sqm](area) 
+    - Show [houses](property_type) with at most [9000000](price) in [The Springs 7](location) featuring [Central Heating](amenities) and [Jacuzzi](amenities)
+    - List available [Apartment](property_type) with [3](bedrooms) bedrooms and [2](bathrooms) bathrooms in [Dubai Investment Park](location) with a minimum of [1500 sqm](area) 
+
+
+
+
+
+
+
+
+- intent: get_recommendations
+  examples: |
+    - Recommend me some properties [min_bedrooms](min_bedrooms) [max_price](max_price)
+    - Show me similar listings
+    - Recommend me some properties with [min_bedrooms](3) bedrooms and under [max_price](500,000)
+    
+    - Suggest properties with at least [min_bedrooms](2) bedrooms and within [max_price](600,000)
+    - Show me similar listings to this one
+    - Recommend me some properties with [min_bedrooms](4) or more bedrooms and under [max_price](700,000)
+    - Show me similar houses within [max_price](450,000)
+    - Can you recommend properties with at least [min_bedrooms](3) bedrooms and under [max_price](550,000)?
+    - Recommend me some listings with [min_bedrooms](2) or more bedrooms and within [max_price](500,000)
+    - Show me similar properties within a budget of [max_price](650,000)
+    - What are the similar properties available within my price range for [min_bedrooms](4) bedrooms and under [max_price](750,000)?
+    - Recommend me some properties with [min_bedrooms](3) bedrooms and within my budget
+    - Show me similar listings to this one for [min_bedrooms](2) bedrooms and under [max_price](500,000)
+    - Suggest some listings with at least [min_bedrooms](3) bedrooms and under [max_price](600,000)
+    - Recommend me some properties with [min_bedrooms](2) or more bedrooms and within [max_price](550,000)
+    - Show me similar houses within [max_price](700,000)
+    - Can you suggest properties with at least [min_bedrooms](4) bedrooms and under [max_price](800,000)?
+    - Recommend me some properties with [min_bedrooms](3) or more bedrooms and within [max_price](500,000)
+    - Show me similar listings to this one for [min_bedrooms](2) bedrooms and under [max_price](450,000)
+    - Suggest some listings with at least [min_bedrooms](3) bedrooms and under [max_price](550,000)
+    - Recommend me some properties with [min_bedrooms](4) or more bedrooms and within [max_price](750,000)
+    - Show me similar houses within [max_price](800,000)
+    - Can you suggest properties with at least [min_bedrooms](5) bedrooms and under [max_price](900,000)?
+    - Recommend me some properties with [min_bedrooms](3) or more bedrooms and within [max_price](600,000)
+    - Show me similar listings to this one for [min_bedrooms](2) bedrooms and under [max_price](500,000)
+    - Suggest some listings with at least [min_bedrooms](3) bedrooms and under [max_price](650,000)
+entities:
+    - location:
+        type: "location"
+        examples: |
+          - Al Safa
+          - Dubai Marina
+          - Jumeirah Village Circle
+          - Arabian Ranches
+          - Dubai Silicon Oasis
+          - The Springs
+          - Jumeirah Lakes Towers
+          - Al Barsha
+          - Emirates Hills
+          - Downtown Dubai
+          - Jumeirah Beach Residence
+          - Motor City
+          - Dubai Investment Park
+          - The Meadows
+          - Dubai Sports City
+          - International City
+          - Al Furjan
+          - Dubai Hills Estate
+          - Dubai Festival City
+          - Mirdif
+          - Jumeirah Park
+          - Discovery Gardens
+          - Dubai International Financial Centre
+          - The Greens
+          - Al Barari
+          - Dubai Design District
+          - Jumeirah Islands
+          - Nad Al Sheba
+          - Dubailand
+          - Dubai Production City
+          - Business Bay
+          - Umm Suqeim
+          - Al Warqaa
+          - Meydan
+          - Remraam
+          - Al Quoz
+          - Al Khawaneej
+          - Al Sufouh
+          - Nadd Al Hamar
+          - Al Jafiliya
+          - Al Mizhar
+          - Al Manara
+          - Al Mankhool
+          - Al Mina
+          - Al Rashidiya
+          - Al Safa 1
+          - Al Satwa
+          - Al Twar
+          - Al Wasl
+          - Al Warsan
+          - Al Zahra
+          - Al Rigga
+          - Al Quoz Industrial Area
+          - Al Karama
+          - Al Nahda
+          - Al Qusais
+          - Al Ras
+          - Al Nahda 2
+          - Al Muhaisnah
+          - Al Garhoud
+          - Al Nahda 1
+          - Al Barsha South
+          - Al Muraqqabat
+          - Al Jaddaf
+          - Al Mamzar
+          - Al Badaa
+          - Al Hudaiba
+          - Al Muteena
+          - Al Sabkha
+          - Al Hamriya
+          - Al Kifaf
+          - Al Raffa
+          - Al Souq Al Kabeer
+          - Al Tayer Building
+          - Al Rifa
+          - Al Mankhool Road
+          - Al Jaffiliya
+          - Al Quoz 1
+          - Al Quoz 2
+          - Al Quoz 3
+          - Al Quoz 4
+          - Al Qouz Industrial Area 1
+          - Al Quoz Industrial Area 2
+          - Al Quoz Industrial Area 3
+          - Al Quoz Industrial Area 4
+          - Al Qouz Industrial Area 5
+          - Al Waha
+          - Al Warqa
+          - Al Warqa 2
+          - Al Warqa 3
+          - Al Warqa 4
+          - Al Warqa 5
+          - Al Warqa 1
+          - Al Warqaa
+          - Al Wasl Road
+          - Al Wuheida
+          - Al Warisan
+          - Al Wind Residence
+          - Al Wusta
+          - Al Waleed Paradise
+          - Al Waleed Villas
+          - Al Waleed City
+          - Al Waleed Palace
+          - Al Waleed Oasis
+          - Al Waleed Complex
+          - Al Waleed Tower
+          - Al Waleed Gardens
+          - Al Waleed Park
+          - Al Waleed Building
+          - Al Waleed Residences
+          - Al Waleed Suites
+          - Al Waleed House
+          - Al Waleed Residence
+          - Al Waleed Community
+          - Al Waleed Village
+          - Al Waleed Gardens
+          - Al Waleed Oasis
+          - Al Waleed Tower
+          - Al Waleed Complex
+          - Al Waleed Gardens
+          - Al Waleed Park
+          - Al Waleed Building
+          - Al Waleed Residences
+          - Al Waleed Suites
+          - Al Waleed House
+          - Al Waleed Residence
+          - Al Waleed Community
+          - Al Waleed Village
+          - Al Waleed Gardens
+          - Al Waleed Oasis
+          - Al Waleed Tower
+          - Arabian Ranches
+          - Jumeirah Park
+          - The Springs
+          - The Meadows
+          - Jumeirah Islands
+          - Al Barari
+          - Jumeirah Village Triangle (JVT)
+          - Jumeirah Village Circle (JVC)
+          - Dubai Marina
+          - Downtown Dubai
+          - Emirates Hills
+          - Palm Jumeirah
+          - Jumeirah Beach Residence (JBR)
+          - The Lakes
+          - Al Furjan
+          - Green Community
+          - Motor City
+          - Mudon
+          - Dubai Hills Estate
+          - Dubai Sports City
+          - Dubai Silicon Oasis
+          - Dubai Investment Park (DIP)
+          - Jumeirah Golf Estates
+          - Umm Suqeim
+          - Al Wasl
+          - Al Satwa
+          - Al Safa
+          - Al Manara
+          - Al Sufouh
+          - Al Quoz
+          - Dubai Residence Complex
+          - Al Khail Heights
+          - Mirdif
+          - Al Rashidiya
+          - International City
+          - Discovery Gardens
+          - Remraam
+          - Dubai Sustainable City
+          - Damac Hills
+          - Dubai Studio City
+          - Dubailand
+          - Meydan
+          - Business Bay
+          - Dubai Festival City
+          - Al Jaddaf
+          - Deira
+          - Bur Dubai
+          - Dubai Creek Harbour
+          - Al Manamah
+          - Al Manama
+          - Dubai Design District (d3)
+          - Al Barsha
+          - Al Barsha South
+          - Al Barsha Heights (Tecom)
+          - Al Warqa
+          - Al Mizhar
+          - Al Muhaisnah
+          - Al Twar
+          - Al Qusais
+          - Al Nahda
+          - Al Quoz Industrial Area
+          - Al Quoz Residential Area
+          - Arabian Ranches 2
+          - Al Reem
+          - Al Sufouh Gardens
+          - Al Khawaneej
+          - Bluewaters Island
+          - City Walk
+          - Culture Village
+          - Dubai Hills View
+          - Dubai Maritime City
+          - Dubai Wharf
+          - Dubai World Central
+          - Meydan Avenue
+          - Emirates Living
+          - Hor Al Anz
+          - Jebel Ali
+          - Jumeirah Beach Park
+          - Jumeirah Heights
+          - Jumeirah Village
+          - La Mer
+          - Nadd Al Hamar
+          - Nad Al Sheba
+          - Oud Metha
+          - Port Rashid
+          - Port Saeed
+          - Ras Al Khor
+          - Reem Community
+          - Sheikh Zayed Road
+          - The Views
+          - Umm Hurair
+          - Umm Ramool
+          - Umm Sequim
+          - Warsan
+          - Al Furjan West
+          - Al Furjan Pavilion
+          - Al Furjan Quortaj
+          - Al Furjan Nakheel Avenue
+          - Al Furjan Masakin
+
+        
+
+
+    - bedrooms:
+        type: "bedrooms"
+        examples: |
+          - 1
+          - 2
+          - 3
+          - 4
+          - 5
+          - 6
+          - 7
+          - 8
+          - 9
+          - 10
+          - 11
+          - 12
+          - 13
+          - 14
+          - 15
+
+    - bathrooms:
+        type: "bathrooms"
+        examples: |
+          - 1
+          - 2
+          - 3
+          - 4
+          - 5
+          - 6
+          - 7
+          - 8
+          - 9
+          - 10
+          - 11
+          - 12
+          - 13
+          - 14
+          - 15
+
